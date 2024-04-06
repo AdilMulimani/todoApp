@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/focusFragment"
+    android:background="@color/black"
+    tools:context=".fragments.FocusFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/profileCardView"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginStart="-5dp"
+        android:layout_marginTop="-5dp"
+        android:layout_marginEnd="-5dp"
+        android:background="@drawable/zen_view_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/userProfileimage"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/illustration_two"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/helloUserTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Hello User"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@+id/userProfileimage"
+            app:layout_constraintTop_toTopOf="@+id/userProfileimage" />
+
+        <TextView
+            android:id="@+id/ProfileDescriptionText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="@string/dndoff"
+            android:textColor="@color/white"
+            android:textSize="12dp"
+            app:layout_constraintBottom_toBottomOf="@+id/userProfileimage"
+            app:layout_constraintStart_toStartOf="@+id/helloUserTextView"
+            app:layout_constraintTop_toTopOf="@+id/helloUserTextView"
+            app:layout_constraintVertical_bias="1.0" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/focusImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="-40dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/zen_mode_monk"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profileCardView" />
+
+    <Button
+        android:id="@+id/startButton"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
+        android:background="@drawable/button_custom"
+        android:drawableStart="@drawable/zen_icon"
+        android:drawablePadding="10dp"
+        android:fontFamily="@font/poppins_medium"
+        android:paddingStart="40dp"
+        android:paddingEnd="80dp"
+        android:text="Start Zen Mode"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/DescriptionTextForTasks"
+        app:layout_constraintHorizontal_bias="0.657"
+        app:layout_constraintStart_toStartOf="@+id/DescriptionTextForTasks"
+        app:layout_constraintTop_toBottomOf="@+id/DescriptionTextForTasks" />
+
+    <TextView
+        android:id="@+id/DescriptionTextForTasks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_bold"
+        android:text="Zen Mode: Stay focused, achieve clarity. Your ultimate focus building companion!"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:layout_marginTop="-30dp"
+        android:padding="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/focusImage"
+        app:layout_constraintTop_toBottomOf="@+id/focusImage" />
+
+    <com.androchef.happytimer.countdowntimer.CircularCountDownView
+        android:id="@+id/circularCountDownView"
+        android:visibility="gone"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="100dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profileCardView"
+        app:stroke_background_color="@color/black"
+        app:stroke_background_thickness="31dp"
+        app:stroke_foreground_color="@color/orange"
+        app:stroke_foreground_thickness="100dp"
+        app:timer_text_color="#FFFFFF"
+        app:timer_text_format="HOUR_MINUTE_SECOND"
+        app:timer_text_isBold="true"
+        app:timer_text_shown="true"
+        app:timer_text_size="30sp"
+        app:timer_type="COUNT_DOWN" />
+
+
+    <ImageButton
+        android:id="@+id/pauseButton"
+        android:visibility="gone"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="92dp"
+        android:background="@drawable/round_custom_button"
+        android:src="@drawable/pause"
+        app:layout_constraintEnd_toStartOf="@+id/quitButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/circularCountDownView" />
+
+    <ImageButton
+        android:id="@+id/quitButton"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:visibility="gone"
+        android:background="@drawable/round_custom_button"
+        android:src="@drawable/square"
+        app:layout_constraintBottom_toBottomOf="@+id/pauseButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/pauseButton" />
+    <TextView
+        android:id="@+id/pauseText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Pause"
+        android:visibility="gone"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/pauseButton"
+        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintStart_toStartOf="@+id/pauseButton"
+        app:layout_constraintTop_toBottomOf="@+id/pauseButton" />
+
+
+    <TextView
+        android:id="@+id/quitText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Quit"
+        android:visibility="gone"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/quitButton"
+        app:layout_constraintHorizontal_bias="0.629"
+        app:layout_constraintStart_toStartOf="@+id/quitButton"
+        app:layout_constraintTop_toBottomOf="@+id/quitButton" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

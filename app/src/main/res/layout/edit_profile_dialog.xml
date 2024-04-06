@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="375dp"
+    android:layout_height="325dp"
+    android:backgroundTint="@android:color/transparent"
+    app:cardCornerRadius="20dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:background="@drawable/authentication">
+
+        <TextView
+            android:id="@+id/NameText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_medium"
+            android:text="User Name"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/titleEditView"
+            app:layout_constraintStart_toStartOf="@+id/titleEditView" />
+
+        <EditText
+            android:id="@+id/titleEditView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="56dp"
+            android:layout_marginEnd="16dp"
+            android:drawablePadding="10dp"
+            android:background="@drawable/edit_text_custom"
+            android:fontFamily="@font/poppins_bold"
+            android:hint="User Name"
+            android:inputType="textPersonName"
+            android:paddingStart="15dp"
+            android:paddingTop="10dp"
+            android:drawableStart="@drawable/username"
+            android:paddingBottom="10dp"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textColorHint="#9F9E9E"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/EmailText"
+            android:layout_width="94dp"
+            android:layout_height="23dp"
+            android:layout_marginStart="20dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="User Email"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/userEmailEditView"
+            app:layout_constraintStart_toStartOf="@+id/userEmailEditView" />
+
+
+        <EditText
+            android:id="@+id/userEmailEditView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="48dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/edit_text_custom"
+            android:drawableStart="@drawable/icon_email"
+            android:drawablePadding="10dp"
+            android:fontFamily="@font/poppins_medium"
+            android:gravity="start"
+            android:inputType="textEmailAddress"
+            android:hint="User Email"
+            android:padding="10dp"
+            android:paddingStart="15dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:textColor="@color/white"
+            android:textColorHint="#9F9E9E"
+            app:layout_constraintEnd_toEndOf="@+id/titleEditView"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/titleEditView"
+            app:layout_constraintTop_toBottomOf="@+id/titleEditView" />
+
+        <Button
+            android:id="@+id/doneButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="24dp"
+            android:background="@drawable/button_custom"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Update"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="@+id/userEmailEditView"
+            app:layout_constraintHorizontal_bias="0.955"
+            app:layout_constraintStart_toEndOf="@+id/cancelButton"
+            app:layout_constraintTop_toBottomOf="@+id/userEmailEditView" />
+
+        <Button
+            android:id="@+id/cancelButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="72dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/authentication"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Cancel"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="@+id/userEmailEditView"
+            app:layout_constraintTop_toBottomOf="@+id/userEmailEditView" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:layout_collapseMode="pin"
+    android:elevation="10dp"
+    app:menu="@menu/menu"
+    app:navigationIcon="@drawable/menu"
+    app:title="To Do App"
+    app:layout_scrollFlags="scroll|enterAlways"
+    android:layout_height="wrap_content"
+    android:id="@+id/toolBar"
+    />
+
